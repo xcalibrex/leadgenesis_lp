@@ -1,0 +1,30 @@
+import { Github, Twitter, Linkedin } from 'lucide-react';
+
+export const Footer = () => {
+    return (
+        <footer className="bg-brand-dark py-12 border-t border-white/5">
+            <div className="container mx-auto px-6">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div className="text-center md:text-left">
+                        <h3 className="text-xl font-montserrat font-bold text-white mb-2">LEADGENESIS</h3>
+                        <p className="text-sm text-brand-muted">
+                            &copy; {new Date().getFullYear()} Lead Genesis Inc. All rights reserved.
+                        </p>
+                    </div>
+
+                    <div className="flex items-center gap-6">
+                        <a href="#" className="text-brand-muted hover:text-brand-cyan transition-colors">
+                            <Twitter size={20} />
+                        </a>
+                        <a href="#" className="text-brand-muted hover:text-brand-cyan transition-colors">
+                            <Linkedin size={20} />
+                        </a>
+                        <a href="#" className="text-brand-muted hover:text-brand-cyan transition-colors">
+                            <Github size={20} />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+};

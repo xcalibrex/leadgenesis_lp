@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+/* Custom Scrollbar for that SaaS feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4CB6C6;
+}
+
+@layer utilities {
+  .type-h1 {
+    @apply font-inter font-extrabold text-5xl md:text-[4rem] leading-[1.1] tracking-tight;
+  }
+
+  .type-h2 {
+    @apply font-inter font-bold text-4xl md:text-5xl tracking-tight;
+  }
+
+  .type-h3 {
+    @apply font-inter font-semibold text-2xl tracking-normal;
+  }
+
+  .type-body {
+    @apply font-inter font-medium text-lg leading-relaxed text-[#999];
+  }
+
+  .type-label {
+    @apply font-inter font-semibold text-sm tracking-wide;
+  }
+}
