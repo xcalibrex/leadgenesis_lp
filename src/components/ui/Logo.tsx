@@ -1,12 +1,12 @@
 import { cn } from '../../lib/utils';
-
+import logoIcon from '../../assets/logo-icon.png';
 
 export const Logo = ({ className }: { className?: string }) => {
     return (
         <div className={cn("flex items-center gap-2", className)}>
             <div className="w-10 h-10 relative flex items-center justify-center">
                 <img
-                    src="/src/assets/logo-icon.png"
+                    src={logoIcon}
                     alt="Lead Genesis Logo"
                     className="w-full h-full object-contain"
                 />
