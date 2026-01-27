@@ -9,8 +9,7 @@ import solarAudioSrc from '../../assets/audio/solar.mp3';
 // Using demo audio for Real Estate as placeholder since site didn't have a distinct one available
 const industries = [
     { id: 'dentist', label: 'Dentist', src: demoAudioSrc },
-    { id: 'solar', label: 'Solar', src: solarAudioSrc },
-    { id: 'realestate', label: 'Real Estate', src: demoAudioSrc },
+    { id: 'physio', label: 'Physio', src: solarAudioSrc },
 ];
 
 export const DemoWidget = () => {
