@@ -59,7 +59,7 @@ export const Hero = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 mb-14">
-                        <a href="https://form.typeform.com/to/WEf158FA" target="_blank" rel="noopener noreferrer">
+                        <a href="https://cal.com/lead-genesis/discovery" target="_blank" rel="noopener noreferrer">
                             <Button size="lg" className="group !rounded-full !px-8 !py-6 !text-[16px] !font-bold bg-brand-cyan text-brand-black hover:bg-brand-cyan/90 shadow-none">
                                 Activate Agent
                                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform stroke-[3]" />

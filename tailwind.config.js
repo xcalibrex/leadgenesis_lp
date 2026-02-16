@@ -16,8 +16,9 @@ export default {
         }
       },
       fontFamily: {
+        sans: ['DM Sans', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        'dm-sans': ['DM Sans', 'sans-serif'],
       },
       backgroundImage: {
         'cyan-gradient': 'linear-gradient(135deg, #4CB6C6 0%, #2E8B99 100%)',

@@ -34,7 +34,7 @@ export const Pricing = () => {
                         <span className="type-label text-white/80">Trusted by Growth Driven Teams</span>
                     </div>
 
-                    <h2 className="type-h2 mb-4 text-white">Pricing</h2>
+                    <h2 className="type-h2 mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white via-gray-300 to-gray-800">Pricing</h2>
                     <p className="type-body text-xl text-[#666]">By Invitation. Built for Teams Ready to Scale.</p>
                 </div>
 
@@ -62,7 +62,7 @@ export const Pricing = () => {
                                 )}
                             >
                                 <div className="mb-8">
-                                    <div className="text-[#666] text-sm font-medium mb-2 font-inter">{plan.type}</div>
+                                    <div className="text-[#666] text-sm font-medium mb-2 font-sans">{plan.type}</div>
                                     <h3 className="type-h3 text-white mb-6">{plan.name}</h3>
                                     <p className="type-body text-[15px] min-h-[45px] text-[#888]">{plan.description}</p>
                                 </div>
@@ -78,7 +78,7 @@ export const Pricing = () => {
                                     </ul>
                                 </div>
 
-                                <a href="https://form.typeform.com/to/WEf158FA" target="_blank" rel="noopener noreferrer" className="mt-auto w-full">
+                                <a href="https://cal.com/lead-genesis/discovery" target="_blank" rel="noopener noreferrer" className="mt-auto w-full">
                                     <Button
                                         variant={plan.buttonStyle === 'white' ? 'white' : 'outline'}
                                         className={cn(

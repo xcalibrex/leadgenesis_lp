@@ -6,7 +6,10 @@ export const Footer = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
-                        <h3 className="text-xl font-montserrat font-bold text-white mb-2">LEADGENESIS</h3>
+                        <div className="text-[20px] font-montserrat tracking-[0.05em] text-white mb-2">
+                            <span className="font-normal">LEAD</span>
+                            <span className="font-bold">GENESIS</span>
+                        </div>
                         <p className="text-sm text-brand-muted">
                             &copy; {new Date().getFullYear()} Lead Genesis Inc. All rights reserved.
                         </p>
