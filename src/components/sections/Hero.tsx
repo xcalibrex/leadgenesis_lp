@@ -60,7 +60,7 @@ export const Hero = () => {
 
                     <div className="flex flex-col sm:flex-row gap-4 mb-14">
                         <a href="https://cal.com/lead-genesis/discovery" target="_blank" rel="noopener noreferrer">
-                            <Button size="lg" className="group !rounded-full !px-8 !py-6 !text-[16px] !font-bold bg-brand-cyan text-brand-black hover:bg-brand-cyan/90 shadow-none">
+                            <Button size="lg" className="w-full sm:w-auto group !rounded-full !px-8 !py-6 !text-[16px] !font-bold bg-brand-cyan text-brand-black hover:bg-brand-cyan/90 shadow-none">
                                 Activate Agent
                                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform stroke-[3]" />
                             </Button>
@@ -69,7 +69,7 @@ export const Hero = () => {
                         <Button
                             variant="ghost"
                             size="lg"
-                            className="!rounded-full !px-8 !py-6 !text-[16px] !font-bold text-white hover:bg-white/5"
+                            className="w-full sm:w-auto !rounded-full !px-8 !py-6 !text-[16px] !font-bold text-white hover:bg-white/5"
                             onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
                         >
                             How it works

@@ -1,4 +1,4 @@
-import { Funnel, Zap } from 'lucide-react';
+import { Funnel, Zap, ChevronDown } from 'lucide-react';
 import { Footer } from '../components/layout/Footer';
 import { motion } from 'framer-motion';
 import { CTASection } from '../components/sections/CTASection';
@@ -33,7 +33,7 @@ export const Leads = () => {
                     </div>
 
                     <h2 className="text-4xl md:text-6xl font-bold mb-8 text-gradient tracking-tight">Performance Driven Results</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                         {[
                             { label: 'Monthly Leads', value: '10,000' },
                             { label: 'Lead to Appt', value: '24%' },
@@ -49,6 +49,11 @@ export const Leads = () => {
 
                 {/* Background Accent */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-cyan/5 blur-[120px] pointer-events-none rounded-full" />
+
+                {/* Section Indicator */}
+                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 lg:hidden text-white/30 animate-bounce">
+                    <ChevronDown className="w-6 h-6" />
+                </div>
             </section>
 
             {/* Verticals Section (From Index) */}
@@ -68,7 +73,7 @@ export const Leads = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-24 gap-y-20 text-left max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-24 gap-y-12 lg:gap-y-20 text-left max-w-5xl mx-auto">
                         {[
                             {
                                 name: 'Solar & Battery',
@@ -104,6 +109,11 @@ export const Leads = () => {
                             </motion.div>
                         ))}
                     </div>
+                </div>
+
+                {/* Section Indicator */}
+                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 lg:hidden text-white/30 animate-bounce">
+                    <ChevronDown className="w-6 h-6" />
                 </div>
             </section>
 

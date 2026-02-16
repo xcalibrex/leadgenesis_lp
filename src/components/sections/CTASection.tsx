@@ -40,11 +40,11 @@ export const CTASection = ({
 
                             <a href={href} target="_blank" rel="noopener noreferrer">
                                 <Button
-                                    className="relative overflow-hidden !rounded-full h-14 px-10 !bg-white !text-black font-bold text-[17px] tracking-wide transition-all hover:scale-105 shadow-[0_0_40px_rgba(76,182,198,0.4)] flex items-center gap-2 group"
+                                    className="w-full md:w-auto relative overflow-hidden !rounded-full h-14 px-10 !bg-white !text-black font-bold text-[17px] tracking-wide transition-all hover:scale-105 shadow-[0_0_40px_rgba(76,182,198,0.4)] flex items-center justify-center gap-2 group"
                                 >
                                     {/* Shimmer Effect */}
                                     <div className="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/50 to-transparent z-10" />
-                                    <span className="relative z-20 flex items-center gap-2">
+                                    <span className="relative z-20 flex items-center justify-center gap-2">
                                         {buttonText}
                                         <ArrowRight className="w-5 h-5 stroke-[3]" />
                                     </span>

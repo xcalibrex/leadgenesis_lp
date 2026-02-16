@@ -8,6 +8,10 @@ import { motion } from 'framer-motion';
 import heroVideo from '../assets/video/video_2.mp4';
 import dataPacksImg from '../assets/images/data_packs_img.jpg';
 import leadsImg from '../assets/images/leads_2.jpg';
+import leader1 from '../assets/images/leader_1.png';
+import leader2 from '../assets/images/leader_2.png';
+import leader3 from '../assets/images/leader_3.png';
+import leader4 from '../assets/images/leader_4.png';
 
 export const Home = () => {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -19,7 +23,7 @@ export const Home = () => {
     }, []);
 
     return (
-        <div className="pt-20">
+        <div className="pt-20 overflow-x-hidden">
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black">
                 {/* Background Video */}
@@ -47,7 +51,7 @@ export const Home = () => {
 
                 <div className="container mx-auto px-4 relative z-20 text-center">
                     {/* Header Group */}
-                    <div className="mb-16">
+                    <div className="mb-6 md:mb-16">
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +59,7 @@ export const Home = () => {
                             transition={{ duration: 0.8, delay: 0.2, ease: [0.21, 0.45, 0.32, 0.9] }}
                             className="font-sans font-medium text-white mb-6 max-w-5xl mx-auto tracking-tight leading-[1.1]"
                         >
-                            <span className="block text-5xl md:text-7xl lg:text-[5.5rem] text-gradient pb-4">
+                            <span className="block text-[2.75rem] md:text-7xl lg:text-[5.5rem] text-gradient pb-6 md:pb-4">
                                 High-Intent Leads <br />
                                 for Fast Growing Teams
                             </span>
@@ -66,7 +70,7 @@ export const Home = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.3, ease: [0.21, 0.45, 0.32, 0.9] }}
-                            className="font-sans text-lg md:text-xl text-[#ccc] max-w-3xl mx-auto leading-relaxed font-light"
+                            className="font-sans text-base md:text-xl text-[#ccc] max-w-3xl mx-auto leading-relaxed font-light px-4"
                         >
                             Scale Your Growth with Live Exclusive Leads, Premium Data & AI Tools
                         </motion.p>
@@ -80,17 +84,17 @@ export const Home = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.4, ease: [0.21, 0.45, 0.32, 0.9] }}
-                            className="inline-flex items-center gap-3 mb-8 bg-white/[0.03] border border-white/10 rounded-full pl-2 pr-6 py-2"
+                            className="inline-flex items-center gap-3 mb-6 bg-white/[0.03] border border-white/10 rounded-full pl-2 pr-6 py-2"
                         >
                             <div className="flex -space-x-3">
-                                {[1, 2, 3, 4].map((i) => (
-                                    <div key={i} className="w-8 h-8 rounded-full border-2 border-black bg-gray-600 overflow-hidden relative">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-black/20"></div>
-                                        <div className={`w-full h-full bg-gradient-to-tr ${i === 1 ? 'from-blue-400 to-purple-500' :
-                                            i === 2 ? 'from-green-400 to-cyan-500' :
-                                                i === 3 ? 'from-orange-400 to-red-500' :
-                                                    'from-pink-400 to-rose-500'
-                                            }`} />
+                                {[leader1, leader2, leader3, leader4].map((img, i) => (
+                                    <div key={i} className="w-9 h-9 rounded-full border-2 border-brand-black bg-brand-dark overflow-hidden relative shadow-xl">
+                                        <img
+                                            src={img}
+                                            alt={`Industry Leader ${i + 1}`}
+                                            className="w-full h-full object-cover"
+                                            loading="lazy"
+                                        />
                                     </div>
                                 ))}
                             </div>
@@ -114,18 +118,20 @@ export const Home = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.4, ease: [0.21, 0.45, 0.32, 0.9] }}
-                            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+                            className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md mx-auto px-4"
                         >
-                            <Button
-                                size="lg"
-                                className="relative overflow-hidden rounded-full h-14 px-10 bg-white text-black font-bold text-[17px] tracking-wide transition-all hover:scale-105 shadow-[0_0_40px_rgba(76,182,198,0.4)] flex items-center gap-2 group"
-                            >
-                                {/* Shimmer Effect */}
-                                <div className="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/50 to-transparent z-10" />
-                                <span className="relative z-20 flex items-center gap-2">Get Leads <ArrowRight className="w-5 h-5 text-black" /></span>
-                            </Button>
-                            <a href="#products" onClick={(e) => { e.preventDefault(); document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                                <Button variant="ghost" size="lg" className="rounded-full h-14 px-8 text-white/70 hover:text-white hover:bg-white/5 font-medium text-[15px] tracking-wide border border-white/10 hover:border-white/20 transition-all">
+                            <div className="w-full sm:w-auto">
+                                <Button
+                                    size="lg"
+                                    className="relative overflow-hidden rounded-full h-14 px-10 w-full bg-white text-black font-bold text-[17px] tracking-wide transition-all hover:scale-105 shadow-[0_0_40px_rgba(76,182,198,0.4)] flex items-center justify-center gap-2 group"
+                                >
+                                    {/* Shimmer Effect */}
+                                    <div className="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/50 to-transparent z-10" />
+                                    <span className="relative z-20 flex items-center gap-2">Get Leads <ArrowRight className="w-5 h-5 text-black" /></span>
+                                </Button>
+                            </div>
+                            <a href="#products" onClick={(e) => { e.preventDefault(); document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' }); }} className="w-full sm:w-auto">
+                                <Button variant="ghost" size="lg" className="rounded-full h-14 px-8 w-full text-white/70 hover:text-white hover:bg-white/5 font-medium text-[15px] tracking-wide border border-white/10 hover:border-white/20 transition-all">
                                     View Products
                                 </Button>
                             </a>
@@ -142,13 +148,13 @@ export const Home = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] }}
-                    className="text-center mb-32 container mx-auto px-4 relative z-10"
+                    className="text-center mb-12 lg:mb-32 container mx-auto px-4 relative z-10"
                 >
-                    <h2 className="text-4xl md:text-6xl font-medium text-gradient mb-6 tracking-tight">
-                        Verticals
+                    <h2 className="text-3xl md:text-6xl font-medium text-gradient mb-6 tracking-tight">
+                        Our Products
                     </h2>
                     <div className="w-full max-w-xs mx-auto h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent mb-6"></div>
-                    <p className="text-[#888] max-w-2xl mx-auto text-lg font-light">
+                    <p className="text-[#888] max-w-2xl mx-auto text-base md:text-lg font-light">
                         Precision-targeted solutions to fuel your sales pipeline.
                     </p>
                 </motion.div>
@@ -156,21 +162,30 @@ export const Home = () => {
 
                 <div className="flex flex-col mb-32">
                     {/* Data Packs Section - Full Width */}
-
                     <div
-                        className="group relative w-full overflow-hidden bg-black py-24 lg:py-32"
+                        className="group relative w-full overflow-hidden bg-black py-12 lg:py-32 border-b border-white/5 lg:border-none"
                     >
                         <div className="container mx-auto px-4 relative z-10">
-                            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                            <div className="relative lg:grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                                {/* Background Image for Mobile */}
+                                <div className="absolute inset-x-0 -inset-y-24 lg:hidden z-0">
+                                    <img
+                                        src={dataPacksImg}
+                                        alt=""
+                                        className="w-full h-full object-cover opacity-20"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black"></div>
+                                </div>
+
                                 <motion.div
                                     initial={{ opacity: 0, x: -30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, margin: "-100px" }}
                                     transition={{ duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] }}
-                                    className="order-2 lg:order-1 text-left"
+                                    className="order-2 lg:order-1 text-left relative z-10"
                                 >
-                                    <h3 className="text-4xl md:text-5xl font-sans font-medium text-gradient mb-6 tracking-tight">Data Packs</h3>
-                                    <p className="text-[#999] text-xl leading-relaxed mb-10 max-w-xl">
+                                    <h3 className="text-3xl md:text-5xl font-sans font-medium text-gradient mb-6 tracking-tight">Data Packs</h3>
+                                    <p className="text-[#999] text-lg md:text-xl leading-relaxed mb-10 max-w-xl font-medium lg:font-normal">
                                         Access verified, high-intent B2B data tailored to your ICP. We provide phone numbers, emails, and direct dials for decision-makers with 99% accuracy.
                                     </p>
 
@@ -180,16 +195,16 @@ export const Home = () => {
                                                 <div className="w-6 h-6 rounded-full bg-brand-cyan/20 flex items-center justify-center mr-4">
                                                     <CheckCircle className="w-4 h-4 text-brand-cyan" />
                                                 </div>
-                                                <span className="text-lg">{item}</span>
+                                                <span className="text-lg font-medium lg:font-normal">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
 
-                                    <a href="https://cal.com/lead-genesis/discovery" target="_blank" rel="noopener noreferrer">
-                                        <Button className="relative overflow-hidden rounded-full h-14 px-10 bg-white text-black font-bold text-[17px] tracking-wide transition-all hover:scale-105 shadow-[0_0_40px_rgba(76,182,198,0.4)] flex items-center gap-2 group">
+                                    <a href="https://cal.com/lead-genesis/discovery" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                                        <Button className="w-full sm:w-auto relative overflow-hidden rounded-full h-14 px-10 bg-white text-black font-bold text-[17px] tracking-wide transition-all hover:scale-105 shadow-[0_0_40px_rgba(76,182,198,0.4)] flex items-center justify-center gap-2 group">
                                             {/* Shimmer Effect */}
                                             <div className="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/50 to-transparent z-10" />
-                                            <span className="relative z-20 flex items-center gap-2">Get Data <ArrowRight className="w-6 h-6 text-black" /></span>
+                                            <span className="relative z-20 flex items-center justify-center gap-2">Get Data <ArrowRight className="w-6 h-6 text-black" /></span>
                                         </Button>
                                     </a>
                                 </motion.div>
@@ -198,7 +213,7 @@ export const Home = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, margin: "-100px" }}
                                     transition={{ duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] }}
-                                    className="order-1 lg:order-2 relative h-[400px] lg:h-[500px] overflow-hidden flex items-center justify-center"
+                                    className="hidden lg:flex order-1 lg:order-2 relative h-[400px] lg:h-[500px] overflow-hidden items-center justify-center"
                                 >
                                     <img
                                         src={dataPacksImg}
@@ -214,18 +229,27 @@ export const Home = () => {
 
 
                     {/* Live Exclusive Leads Section - Full Width */}
-
                     <div
-                        className="group relative w-full overflow-hidden bg-black py-24 lg:py-32"
+                        className="group relative w-full overflow-hidden bg-black py-12 lg:py-32"
                     >
                         <div className="container mx-auto px-4 relative z-10">
-                            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                            <div className="relative lg:grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                                {/* Background Image for Mobile */}
+                                <div className="absolute inset-x-0 -inset-y-24 lg:hidden z-0">
+                                    <img
+                                        src={leadsImg}
+                                        alt=""
+                                        className="w-full h-full object-cover opacity-20"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black"></div>
+                                </div>
+
                                 <motion.div
                                     initial={{ opacity: 0, x: -30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, margin: "-100px" }}
                                     transition={{ duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] }}
-                                    className="relative h-[400px] lg:h-[500px] overflow-hidden flex items-center justify-center"
+                                    className="hidden lg:flex relative h-[400px] lg:h-[500px] overflow-hidden items-center justify-center"
                                 >
                                     <img
                                         src={leadsImg}
@@ -241,10 +265,10 @@ export const Home = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, margin: "-100px" }}
                                     transition={{ duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] }}
-                                    className="text-left"
+                                    className="text-left relative z-10"
                                 >
-                                    <h3 className="text-4xl md:text-5xl font-medium text-gradient mb-6 tracking-tight">Live Leads</h3>
-                                    <p className="text-[#999] text-xl leading-relaxed mb-10 max-w-xl">
+                                    <h3 className="text-3xl md:text-5xl font-medium text-gradient mb-6 tracking-tight">Live Leads</h3>
+                                    <p className="text-[#999] text-lg md:text-xl leading-relaxed mb-10 max-w-xl font-medium lg:font-normal">
                                         Scale your performance with our premium pay-per-lead model. We deliver 100% exclusive prospects directly into your workflow.
                                     </p>
 
@@ -254,16 +278,16 @@ export const Home = () => {
                                                 <div className="w-6 h-6 rounded-full bg-brand-cyan/20 flex items-center justify-center mr-4">
                                                     <CheckCircle className="w-4 h-4 text-brand-cyan" />
                                                 </div>
-                                                <span className="text-lg">{item}</span>
+                                                <span className="text-lg font-medium lg:font-normal">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
 
-                                    <a href="https://cal.com/lead-genesis/discovery" target="_blank" rel="noopener noreferrer">
-                                        <Button className="relative overflow-hidden rounded-full h-14 px-10 bg-white text-black font-bold text-[17px] tracking-wide transition-all hover:scale-105 shadow-[0_0_40px_rgba(76,182,198,0.4)] flex items-center gap-2 group">
+                                    <a href="https://cal.com/lead-genesis/discovery" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                                        <Button className="w-full sm:w-auto relative overflow-hidden rounded-full h-14 px-10 bg-white text-black font-bold text-[17px] tracking-wide transition-all hover:scale-105 shadow-[0_0_40px_rgba(76,182,198,0.4)] flex items-center justify-center gap-2 group">
                                             {/* Shimmer Effect */}
                                             <div className="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/50 to-transparent z-10" />
-                                            <span className="relative z-20 flex items-center gap-2">Get Leads <ArrowRight className="w-6 h-6 text-black" /></span>
+                                            <span className="relative z-20 flex items-center justify-center gap-2">Get Leads <ArrowRight className="w-6 h-6 text-black" /></span>
                                         </Button>
                                     </a>
                                 </motion.div>
@@ -275,7 +299,7 @@ export const Home = () => {
                 {/* Industries Section - Sophisticated Grid */}
 
                 <div className="container mx-auto px-4">
-                    <div className="max-w-7xl mx-auto mb-32">
+                    <div className="max-w-7xl mx-auto mb-16 lg:mb-32">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-medium text-gradient mb-6">Industries We Power</h2>
                             <div className="w-full max-w-xs mx-auto h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent"></div>
@@ -304,7 +328,7 @@ export const Home = () => {
                                     <motion.h4
                                         initial={{ opacity: 0, y: 15 }}
                                         whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true, margin: "-100px" }}
+                                        viewport={{ once: true, margin: "-50px" }}
                                         transition={{
                                             duration: 0.8,
                                             delay: 0.1 * idx,
@@ -317,7 +341,7 @@ export const Home = () => {
                                     <motion.p
                                         initial={{ opacity: 0, y: 15 }}
                                         whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true, margin: "-100px" }}
+                                        viewport={{ once: true, margin: "-50px" }}
                                         transition={{
                                             duration: 0.8,
                                             delay: (0.1 * idx) + 0.2,
@@ -337,7 +361,7 @@ export const Home = () => {
             {/* AI Caller Section - Full Width */}
             < section className="py-0 bg-[#050505] relative border-t border-b border-white/5" >
                 <div className="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-cyan/5 via-[#050505] to-[#050505]">
-                    <div className="container mx-auto px-4 py-32">
+                    <div className="container mx-auto px-4 py-20 lg:py-32">
                         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                             <motion.div
                                 initial={{ opacity: 0, x: -30 }}
@@ -351,18 +375,18 @@ export const Home = () => {
                                     <span className="text-[11px] uppercase tracking-widest font-bold text-brand-cyan">Taking Limited Applications</span>
                                 </div>
 
-                                <h3 className="text-5xl md:text-7xl font-medium text-white mb-8 tracking-tight leading-none">
+                                <h3 className="text-4xl md:text-7xl font-medium text-white mb-8 tracking-tight leading-none">
                                     Meet Your New <br />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-white">AI Sales Agent.</span>
                                 </h3>
-                                <p className="text-[#999] text-xl mb-10 leading-relaxed max-w-xl font-light">
+                                <p className="text-[#999] text-lg md:text-xl mb-10 leading-relaxed max-w-xl font-light">
                                     Scale your outreach instantly with our proprietary AI Caller. It works 24/7 to engage leads, handle objections, and book meetings without the overhead of a human team.
                                 </p>
-                                <a href="https://cal.com/lead-genesis/ai-caller" target="_blank" rel="noopener noreferrer" className="inline-block">
-                                    <Button className="relative overflow-hidden !rounded-full h-14 px-10 !bg-white !text-black font-bold text-[17px] tracking-wide transition-all hover:scale-105 shadow-[0_0_40px_rgba(76,182,198,0.4)] flex items-center gap-2 group">
+                                <a href="https://cal.com/lead-genesis/ai-caller" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block">
+                                    <Button className="w-full sm:w-auto relative overflow-hidden !rounded-full h-14 px-10 !bg-white !text-black font-bold text-[17px] tracking-wide transition-all hover:scale-105 shadow-[0_0_40px_rgba(76,182,198,0.4)] flex items-center justify-center gap-2 group">
                                         {/* Shimmer Effect */}
                                         <div className="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/50 to-transparent z-10" />
-                                        <span className="relative z-20 flex items-center gap-2">
+                                        <span className="relative z-20 flex items-center justify-center gap-2">
                                             Apply here
                                             <ArrowRight className="w-5 h-5" />
                                         </span>
@@ -375,7 +399,7 @@ export const Home = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] }}
-                                className="flex-1 w-full relative"
+                                className="flex-1 w-full relative overflow-hidden"
                             >
                                 {/* Gradient Accents */}
                                 <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-cyan/10 blur-[100px] pointer-events-none" />

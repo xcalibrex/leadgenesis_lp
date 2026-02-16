@@ -70,7 +70,7 @@ export const About = () => {
             </section>
 
             {/* Dylan - Director & Co-Founder */}
-            <section className="h-screen snap-start px-4 md:px-20 bg-black flex flex-col items-center justify-center border-t border-white/5 relative overflow-hidden">
+            <section className="min-h-screen lg:h-screen snap-start px-4 md:px-20 bg-black flex flex-col items-center justify-center border-t border-white/5 relative overflow-hidden pb-40 lg:pb-0">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -100,7 +100,7 @@ export const About = () => {
                         <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
                             <div className="relative group">
                                 <div className="absolute -inset-4 bg-brand-cyan/20 rounded-[20px] blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
-                                <div className="w-[280px] h-[380px] md:w-[350px] md:h-[450px] bg-gradient-to-br from-[#111] to-black rounded-[20px] border border-white/10 relative z-10 overflow-hidden flex items-center justify-center">
+                                <div className="aspect-square w-full max-w-[300px] md:w-[350px] md:h-[450px] bg-gradient-to-br from-[#111] to-black rounded-[20px] border border-white/10 relative z-10 overflow-hidden flex items-center justify-center">
                                     <div className="text-gray-800 text-6xl md:text-7xl font-bold opacity-10">DYLAN</div>
                                     <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
                                 </div>
@@ -109,13 +109,13 @@ export const About = () => {
                     </div>
                 </motion.div>
                 {/* Scroll hint for next founder */}
-                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-                    <ChevronDown className="w-5 h-5 text-gray-600" />
+                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 lg:hidden">
+                    <ChevronDown className="w-6 h-6 text-brand-cyan animate-bounce" />
                 </div>
             </section>
 
             {/* David - Director & Co-Founder */}
-            <section className="h-screen snap-start px-4 md:px-20 bg-[#020202] flex flex-col items-center justify-center border-t border-white/5 relative overflow-hidden">
+            <section className="min-h-screen lg:h-screen snap-start px-4 md:px-20 bg-[#020202] flex flex-col items-center justify-center border-t border-white/5 relative overflow-hidden pb-40 lg:pb-0">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -127,7 +127,7 @@ export const About = () => {
                         <div className="flex justify-center lg:justify-start">
                             <div className="relative group">
                                 <div className="absolute -inset-4 bg-brand-cyan/20 rounded-[20px] blur-3xl opacity-10 group-hover:opacity-40 transition-opacity duration-700"></div>
-                                <div className="w-[280px] h-[380px] md:w-[350px] md:h-[450px] bg-gradient-to-br from-[#0A0A0A] to-black rounded-[20px] border border-white/10 relative z-10 overflow-hidden flex items-center justify-center">
+                                <div className="aspect-square w-full max-w-[300px] md:w-[350px] md:h-[450px] bg-gradient-to-br from-[#0A0A0A] to-black rounded-[20px] border border-white/10 relative z-10 overflow-hidden flex items-center justify-center">
                                     <div className="text-gray-800 text-6xl md:text-7xl font-bold opacity-10 uppercase">DAVID</div>
                                     <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
                                 </div>
@@ -153,6 +153,10 @@ export const About = () => {
                         </div>
                     </div>
                 </motion.div>
+                {/* Scroll hint for next section */}
+                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 lg:hidden">
+                    <ChevronDown className="w-6 h-6 text-brand-cyan animate-bounce" />
+                </div>
             </section>
 
             {/* Footer Section */}
