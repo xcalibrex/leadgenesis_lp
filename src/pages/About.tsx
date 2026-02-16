@@ -70,7 +70,7 @@ export const About = () => {
             </section>
 
             {/* Dylan - Director & Co-Founder */}
-            <section className="min-h-screen lg:h-screen snap-start px-4 md:px-20 bg-black flex flex-col items-center justify-center border-t border-white/5 relative overflow-hidden pb-40 lg:pb-0">
+            <section className="min-h-screen lg:h-screen snap-start px-4 md:px-20 bg-black flex flex-col items-center justify-center pt-32 lg:pt-0 border-t border-white/5 relative overflow-hidden pb-40 lg:pb-0">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -78,7 +78,7 @@ export const About = () => {
                     transition={{ duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] }}
                     className="container mx-auto"
                 >
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="flex flex-col lg:flex-row justify-center items-center gap-12">
                         <div className="order-2 lg:order-1">
                             <h3 className="text-brand-cyan font-bold uppercase tracking-[0.3em] text-xs mb-4">Director & Co-Founder</h3>
                             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gradient italic pr-4">Dylan</h2>
@@ -97,7 +97,7 @@ export const About = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+                        <div className="flex justify-center">
                             <div className="relative group">
                                 <div className="absolute -inset-4 bg-brand-cyan/20 rounded-[20px] blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
                                 <div className="aspect-square w-full max-w-[300px] md:w-[350px] md:h-[450px] bg-gradient-to-br from-[#111] to-black rounded-[20px] border border-white/10 relative z-10 overflow-hidden flex items-center justify-center">
@@ -115,7 +115,7 @@ export const About = () => {
             </section>
 
             {/* David - Director & Co-Founder */}
-            <section className="min-h-screen lg:h-screen snap-start px-4 md:px-20 bg-[#020202] flex flex-col items-center justify-center border-t border-white/5 relative overflow-hidden pb-40 lg:pb-0">
+            <section className="min-h-screen lg:h-screen snap-start px-4 md:px-20 bg-[#020202] flex flex-col items-center justify-center pt-32 lg:pt-0 border-t border-white/5 relative overflow-hidden pb-40 lg:pb-0">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -123,8 +123,8 @@ export const About = () => {
                     transition={{ duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] }}
                     className="container mx-auto"
                 >
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="flex justify-center lg:justify-start">
+                    <div className="flex flex-col lg:flex-row justify-center items-center gap-12">
+                        <div className="flex justify-center">
                             <div className="relative group">
                                 <div className="absolute -inset-4 bg-brand-cyan/20 rounded-[20px] blur-3xl opacity-10 group-hover:opacity-40 transition-opacity duration-700"></div>
                                 <div className="aspect-square w-full max-w-[300px] md:w-[350px] md:h-[450px] bg-gradient-to-br from-[#0A0A0A] to-black rounded-[20px] border border-white/10 relative z-10 overflow-hidden flex items-center justify-center">
